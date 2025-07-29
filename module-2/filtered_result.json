@@ -1,0 +1,325 @@
+{
+    "validated": [
+        {
+            "subdomain": "static.uber.com",
+            "url": "http://static.uber.com",
+            "status": 403
+        },
+        {
+            "subdomain": "www.uber.com",
+            "url": "http://www.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "beta.uber.com",
+            "url": "http://beta.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "www.blog.uber.com",
+            "url": "http://www.blog.uber.com",
+            "status": 403
+        },
+        {
+            "subdomain": "info.uber.com",
+            "url": "http://info.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "mail.uber.com",
+            "url": "http://mail.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "blog.uber.com",
+            "url": "http://blog.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "cn.uber.com",
+            "url": "http://cn.uber.com",
+            "status": 403
+        },
+        {
+            "subdomain": "video.uber.com",
+            "url": "http://video.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "data.uber.com",
+            "url": "http://data.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "jobs.uber.com",
+            "url": "http://jobs.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "docs.uber.com",
+            "url": "http://docs.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "ad.uber.com",
+            "url": "http://ad.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "photo.uber.com",
+            "url": "http://photo.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "downloads.uber.com",
+            "url": "http://downloads.uber.com",
+            "status": 503
+        },
+        {
+            "subdomain": "events.uber.com",
+            "url": "http://events.uber.com",
+            "status": 403
+        },
+        {
+            "subdomain": "t.uber.com",
+            "url": "http://t.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "tools.uber.com",
+            "url": "http://tools.uber.com",
+            "status": 401
+        },
+        {
+            "subdomain": "share.uber.com",
+            "url": "http://share.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "free.uber.com",
+            "url": "http://free.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "v.uber.com",
+            "url": "http://v.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "careers.uber.com",
+            "url": "http://careers.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "pt.uber.com",
+            "url": "http://pt.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "assets.uber.com",
+            "url": "http://assets.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "love.uber.com",
+            "url": "http://love.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "x.uber.com",
+            "url": "http://x.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "eng.uber.com",
+            "url": "http://eng.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "p.uber.com",
+            "url": "http://p.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "track.uber.com",
+            "url": "http://track.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "ar.uber.com",
+            "url": "http://ar.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "f.uber.com",
+            "url": "http://f.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "security.uber.com",
+            "url": "http://security.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "team.uber.com",
+            "url": "http://team.uber.com",
+            "status": 401
+        },
+        {
+            "subdomain": "join.uber.com",
+            "url": "http://join.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "ci.uber.com",
+            "url": "http://ci.uber.com",
+            "status": 401
+        },
+        {
+            "subdomain": "people.uber.com",
+            "url": "http://people.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "contact.uber.com",
+            "url": "http://contact.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "groups.uber.com",
+            "url": "http://groups.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "base.uber.com",
+            "url": "http://base.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "z.uber.com",
+            "url": "http://z.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "qr.uber.com",
+            "url": "http://qr.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "uc.uber.com",
+            "url": "http://uc.uber.com",
+            "status": 403
+        },
+        {
+            "subdomain": "delivery.uber.com",
+            "url": "http://delivery.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "org.uber.com",
+            "url": "http://org.uber.com",
+            "status": 403
+        },
+        {
+            "subdomain": "marketplace.uber.com",
+            "url": "http://marketplace.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "brand.uber.com",
+            "url": "http://brand.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "cards.uber.com",
+            "url": "http://cards.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "metro.uber.com",
+            "url": "http://metro.uber.com",
+            "status": 400
+        },
+        {
+            "subdomain": "test123.uber.com",
+            "url": "http://test123.uber.com",
+            "status": 400
+        },
+        {
+            "subdomain": "profiles.uber.com",
+            "url": "http://profiles.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "fresh.uber.com",
+            "url": "http://fresh.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "bz.uber.com",
+            "url": "http://bz.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "t2.uber.com",
+            "url": "http://t2.uber.com",
+            "status": 401
+        },
+        {
+            "subdomain": "cnc.uber.com",
+            "url": "http://cnc.uber.com",
+            "status": 400
+        },
+        {
+            "subdomain": "y.uber.com",
+            "url": "http://y.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "engineering.uber.com",
+            "url": "http://engineering.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "pac.uber.com",
+            "url": "http://pac.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "investor.uber.com",
+            "url": "http://investor.uber.com",
+            "status": 403
+        },
+        {
+            "subdomain": "opensource.uber.com",
+            "url": "http://opensource.uber.com",
+            "status": 200
+        },
+        {
+            "subdomain": "gifts.uber.com",
+            "url": "http://gifts.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "drive.uber.com",
+            "url": "http://drive.uber.com",
+            "status": 406
+        },
+        {
+            "subdomain": "jump.uber.com",
+            "url": "http://jump.uber.com",
+            "status": 403
+        },
+        {
+            "subdomain": "newsroom.uber.com",
+            "url": "http://newsroom.uber.com",
+            "status": 403
+        },
+        {
+            "subdomain": "works.uber.com",
+            "url": "http://works.uber.com",
+            "status": 406
+        }
+    ],
+    "unresolved": []
+}
