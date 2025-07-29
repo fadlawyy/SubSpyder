@@ -1,0 +1,17 @@
+# Core dependencies
+requests>=2.25.1
+urllib3>=1.26.0
+
+# API integrations
+shodan>=1.28.0
+
+# Async HTTP client
+aiohttp>=3.8.0
+
+# Configuration management
+configparser>=5.0.0
+
+# Development dependencies (optional)
+# pytest>=6.0.0
+# black>=21.0.0
+# flake8>=3.8.0 

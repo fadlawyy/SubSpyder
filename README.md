@@ -1,6 +1,6 @@
-# Complete SubSpyder - All Modules Merged
+# SubSpyder - Advanced Subdomain Enumeration Tool
 
-A comprehensive subdomain enumeration tool that combines multiple advanced techniques for discovering subdomains of any target domain.
+A comprehensive, modular subdomain enumeration tool that combines multiple advanced techniques for discovering subdomains of any target domain. Built with modern Python packaging practices for maintainability and extensibility.
 
 ## 🚀 Features
 
@@ -28,21 +28,60 @@ A comprehensive subdomain enumeration tool that combines multiple advanced techn
 
 ## 📋 Requirements
 
-### 🐳 Docker (Recommended)
+### 💻 Python Requirements
+- Python 3.8 or higher
+- pip package manager
+
+### 🐳 Docker (Optional)
 - Docker Engine 20.10+
 - Docker Compose 2.0+ (optional)
 
-### 💻 Local Installation
+## 🛠️ Installation
+
+### Method 1: Install as Package (Recommended)
 ```bash
-pip install -r module-1/requirements.txt
+# Install from current directory
+pip install -e .
+
+# Or install directly
+pip install -r requirements.txt
 ```
 
-Required packages:
-- `requests>=2.25.1`
-- `urllib3>=1.26.0`
-- `shodan>=1.28.0`
-- `aiohttp>=3.8.0`
-- `configparser>=5.0.0`
+### Method 2: Local Development
+```bash
+# Clone and install in development mode
+git clone <repository-url>
+cd subspyder
+pip install -e .
+```
+
+### Method 3: Docker Installation
+```bash
+# Build and run with Docker
+docker build -t subspyder .
+docker run --rm subspyder --help
+```
+
+## 📦 Package Structure
+
+```
+subspyder/
+├── __init__.py              # Package initialization and exports
+├── core/                    # Core components
+│   ├── __init__.py
+│   ├── config.py           # Configuration management
+│   └── subspyder.py        # Main orchestrator class
+├── modules/                 # Enumeration modules
+│   ├── __init__.py
+│   ├── passive.py          # Passive enumeration
+│   ├── active.py           # Active brute force
+│   ├── ai_predictor.py     # AI-powered prediction
+│   └── validator.py        # Validation and Discord
+└── utils/                   # Utility functions
+    ├── __init__.py
+    ├── helpers.py          # Helper functions
+    └── discord.py          # Discord notification utilities
+```
 
 ## ⚙️ Configuration
 
@@ -67,102 +106,72 @@ enable_discord_notifications = false
 
 ## 🎯 Usage
 
-### 🐳 Docker Usage (Recommended)
+### 🚀 Quick Start
 
-#### Prerequisites
-- Docker installed and running
-- Docker Compose (optional, for advanced usage)
+#### Command Line Interface
+```bash
+# Basic usage
+python subspyder_cli.py example.com
+
+# With custom options
+python subspyder_cli.py example.com -o results.json --status-codes 200,403,500
+
+# Test Discord webhook
+python subspyder_cli.py --test-discord
+
+# Show configuration
+python subspyder_cli.py --config
+```
+
+#### Python Package Usage
+```python
+from subspyder import CompleteSubSpyder, run_enumeration
+
+# Simple one-liner
+results = run_enumeration("example.com")
+
+# Advanced usage
+subspyder = CompleteSubSpyder(accepted_status_codes=[200, 403, 500])
+results = subspyder.run_complete_enumeration("example.com", "custom_wordlist.txt")
+subspyder.save_results(results, "results.json")
+```
+
+#### Individual Module Usage
+```python
+from subspyder import PassiveEnumerator, AIPredictor
+from subspyder.core.config import Config
+
+config = Config()
+
+# Use only passive enumeration
+passive = PassiveEnumerator(config)
+results = passive.enumerate_passive("example.com")
+
+# Use only AI prediction
+ai = AIPredictor(config)
+predictions = ai.predict_subdomains("example.com", ["www.example.com"])
+```
+
+### 🐳 Docker Usage
 
 #### Quick Start with Docker
-
-1. **Build the Docker image:**
-   ```bash
-   # Linux/macOS
-   ./docker-run.sh build
-   
-   # Windows
-   docker-run.bat build
-   ```
-
-2. **Run subdomain enumeration:**
-   ```bash
-   # Linux/macOS
-   ./docker-run.sh run example.com
-   
-   # Windows
-   docker-run.bat run example.com
-   ```
-
-3. **Advanced Docker usage:**
-   ```bash
-   # Custom output file
-   ./docker-run.sh run example.com -o results.json
-   
-   # Custom status codes
-   ./docker-run.sh run example.com --status-codes 200,403,500
-   
-   # Show configuration
-   ./docker-run.sh config
-   ```
-
-#### Docker Compose Usage
-
-1. **Run with docker-compose:**
-   ```bash
-   # Build and run
-   docker-compose run --rm subspyder example.com
-   
-   # With custom options
-   docker-compose run --rm subspyder example.com -o results.json
-   ```
-
-2. **Environment variables (optional):**
-   ```bash
-   # Set API keys via environment
-   export VIRUSTOTAL_API_KEY="your_key"
-   export SHODAN_API_KEY="your_key"
-   docker-compose run --rm subspyder example.com
-   ```
-
-#### Direct Docker Commands
-
 ```bash
-# Build image
+# Build and run
 docker build -t subspyder .
+docker run --rm subspyder example.com
 
-# Run basic scan
-docker run --rm -v $(pwd)/results:/app/results subspyder example.com
-
-# Run with custom config
-docker run --rm \
-  -v $(pwd)/subspyder_config.ini:/app/subspyder_config.ini:ro \
-  -v $(pwd)/results:/app/results \
-  subspyder example.com -o results.json
+# With custom options
+docker run --rm subspyder example.com -o results.json --status-codes 200,403,500
 ```
 
-### 💻 Local Usage
-
-#### Basic Usage
+#### Docker Compose
 ```bash
-python subspyder.py example.com
-```
+# Run with docker-compose
+docker-compose run --rm subspyder example.com
 
-#### Advanced Options
-```bash
-# Custom output file
-python subspyder.py example.com -o results.json
-
-# Custom status codes
-python subspyder.py example.com --status-codes 200,403,500
-
-# Custom wordlist
-python subspyder.py example.com --wordlist custom_wordlist.txt
-
-# Show configuration status
-python subspyder.py --config
-
-# Show help
-python subspyder.py --help
+# With environment variables
+export VIRUSTOTAL_API_KEY="your_key"
+docker-compose run --rm subspyder example.com
 ```
 
 ## 📊 Output
