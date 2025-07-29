@@ -1,6 +1,7 @@
 import json
-from src.ai_predictor import query_gemini
-from src.domain_type_detector import detect_website_type
+
+from src import ai_predictor
+from domain_type_detector import detect_website_type
 
 def main():
     domain = "kareem.net"
