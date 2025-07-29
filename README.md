@@ -85,24 +85,52 @@ subspyder/
 
 ## ⚙️ Configuration
 
-Edit `subspyder_config.ini` to configure API keys and settings:
+### 🔑 API Keys Setup
 
-```ini
-[API_KEYS]
-virustotal_api_key = your_virustotal_key
-securitytrails_api_key = your_securitytrails_key
-shodan_api_key = your_shodan_key
-dnsdumpster_api_key = your_dnsdumpster_key
-criminalip_api_key = your_criminalip_key
-gemini_api_key = your_gemini_key
+**Important**: Before using SubSpyder, you need to configure your API keys. Follow these steps:
 
-[SETTINGS]
-timeout = 10
-delay = 1
-output_file = subspyder_results.json
-discord_webhook_url = your_discord_webhook_url
-enable_discord_notifications = false
-```
+1. **Copy the template configuration file:**
+   ```bash
+   cp subspyder_config_template.ini subspyder_config.ini
+   ```
+
+2. **Edit `subspyder_config.ini` and add your API keys:**
+
+   ```ini
+   [API_KEYS]
+   # Get your API keys from the respective services
+   virustotal_api_key = YOUR_VIRUSTOTAL_API_KEY_HERE
+   securitytrails_api_key = YOUR_SECURITYTRAILS_API_KEY_HERE
+   shodan_api_key = YOUR_SHODAN_API_KEY_HERE
+   dnsdumpster_api_key = YOUR_DNSDUMPSTER_API_KEY_HERE
+   criminalip_api_key = YOUR_CRIMINALIP_API_KEY_HERE
+   gemini_api_key = YOUR_GEMINI_API_KEY_HERE
+
+   [SETTINGS]
+   timeout = 10
+   delay = 1
+   output_file = subspyder_results.json
+   discord_webhook_url = YOUR_DISCORD_WEBHOOK_URL_HERE
+   enable_discord_notifications = false
+   ```
+
+### 🔗 API Key Sources
+
+| Service | URL | Description |
+|---------|-----|-------------|
+| **VirusTotal** | https://www.virustotal.com/gui/join-us | Free account with API access |
+| **SecurityTrails** | https://securitytrails.com/app/api | Free tier available |
+| **Shodan** | https://account.shodan.io/register | Free account with limited queries |
+| **DNSDumpster** | https://dnsdumpster.com/ | Free service |
+| **Criminal IP** | https://www.criminalip.io/ | Free tier available |
+| **Google Gemini** | https://makersuite.google.com/app/apikey | Free API key |
+
+### 🔒 Security Note
+
+- **Never commit your `subspyder_config.ini` file** with real API keys to version control
+- The `.gitignore` file is configured to exclude this file
+- Use the template file (`subspyder_config_template.ini`) as a reference
+- Consider using environment variables for production deployments
 
 ## 🎯 Usage
 
@@ -312,18 +340,76 @@ docker run --rm -it subspyder --help
 docker run --rm -it subspyder ls -la
 ```
 
+## 🚀 Getting Started
+
+### Quick Start
+```bash
+# 1. Clone the repository
+git clone <repository-url>
+cd SubSpyder
+
+# 2. Install dependencies
+pip install -e .
+
+# 3. Set up configuration
+cp subspyder_config_template.ini subspyder_config.ini
+# Edit subspyder_config.ini with your API keys
+
+# 4. Run your first scan
+python subspyder_cli.py example.com
+```
+
+### 📖 Detailed Setup
+For detailed setup instructions, see [SETUP_GUIDE.md](SETUP_GUIDE.md).
+
 ## 📝 License
 
-This tool is for educational and authorized security testing purposes only.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### How to Contribute
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Setup
+```bash
+# Clone and setup development environment
+git clone <repository-url>
+cd SubSpyder
+pip install -e .
+pip install -r requirements-dev.txt  # If available
+```
+
+## 🐛 Bug Reports
+
+If you find a bug, please open an issue with:
+- Detailed description of the problem
+- Steps to reproduce
+- Expected vs actual behavior
+- Your configuration (without API keys)
 
 ## ⚠️ Disclaimer
 
-This tool is designed for authorized security testing and research purposes only. Always ensure you have proper authorization before scanning any domain. 
+This tool is designed for **authorized security testing and research purposes only**. 
+
+**⚠️ Important Legal Notice:**
+- Always ensure you have **proper authorization** before scanning any domain
+- This tool should only be used on domains you own or have explicit permission to test
+- The authors are not responsible for any misuse of this tool
+- Users are responsible for complying with all applicable laws and regulations
+
+## 📞 Support
+
+- **Documentation**: [SETUP_GUIDE.md](SETUP_GUIDE.md)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/subspyder/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/subspyder/discussions)
+
+## ⭐ Star History
+
+If you find this tool useful, please consider giving it a star on GitHub! 
